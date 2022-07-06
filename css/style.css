@@ -1,0 +1,125 @@
+* {
+    margin: 0; /* Ele vai zera todas as propriedades que o navegador ja vem */
+    padding: 0;
+    box-sizing: border-box; /* E a medida da caixa, vai ser da borda da caixa, o conteudo e a outra borda da caixa, se n tiver esse border-box ia conta apartir do conteudo e da caixa, consequentimento se e aumento a largura a caixa iria crescer */
+}
+
+html {
+    /*varivel*/
+    --bg-color: #edf2ff;
+    --text-color: #00082f;
+    --primary-color: #4263EB;
+    --primary-color-dark: #364FC7;
+}
+
+.dark-blue {
+    --bg-color: #00082f;
+    --text-color: #FFFFFF;
+}
+
+.pink {
+    --bg-color: #FFF8F6;
+    --text-color: #1F000B;
+    --primary-color: #d6336c;
+    --primary-color-dark: #A61E4D;
+}
+
+.pink-blue {
+    --bg-color: #1F000B;
+    --text-color: #FFFFFF;
+    --primary-color: #D6336C;
+    --primary-color-dark: #1F000B;
+}
+
+.yellow {
+    --bg-color: #EDEA21;
+    --primary-color: #E0DD22;
+    --primary-color-dark: #ADAB18;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Roboto', sans-serif;
+}
+
+.container { /* Esse contenier foi criado pra fazer uma caixa de alinhamento dos itens da pagina*/
+    /*border: 7px solid red;*/ /* Era pra ver a bordar dos itens da pagina */
+    text-align: center; /* Para centralizar os itens */ 
+    width: 300px; /* A largura da pagina */
+    margin: 60px auto; /* O 60px e pra CIMA E EMBAIXO, e o auto significa automatico para os lados */ 
+}
+
+
+img {
+    width: 100%; /* Esse width foi colocado pq a imagem ficaria maior do que a borda utilizado, 100% em relacão a width do COTAINER, 100% dos 300px*/
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    padding: 4px;
+    border: var(--primary-color) solid 4px;
+
+    transition: img 400ms;
+}
+
+img:hover {
+    border-color: var(--primary-color-dark);
+}
+
+
+h1 {
+    margin-top: 24px; /* Distancia pra cima */
+    margin-bottom: 8px; /* Distancia pra baixo*/
+    font-style: 32px;
+}
+
+
+p {
+    font-family: 'Roboto Mono', monospace;
+    opacity: 0.9; /* 0 vai fazer o texto sumir e 1 ele aparece */
+    font-size: 18px;
+    font-weight: 400; /* peso da fonte */
+}
+
+
+ul {
+    list-style: none; /* Serve pra tira o estilo do texto*/
+    margin: 48px 0px;
+}
+
+ul li a {
+    width: 100%;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary-color); /* Numero Hex*/
+    text-decoration: none; /* tira os _ */
+    color: white;
+    text-transform: uppercase; /* caixa alta */
+    font-size: 14px;
+
+    margin-bottom: 16px;
+    border-radius: 6x;
+
+    transition: background 400ms; /* transição do hover no background */
+}
+
+ul li a:hover {
+    background: var(--primary-color-dark);
+}
+
+footer {
+    font-weight: 500;
+    font-size: 12px;
+    opacity: 0.6;
+    transition: footer 400ms;
+}
+
+footer:hover {
+    opacity: 1;
+}
+
+footer a {
+    color: var(--tex-color);
+}
